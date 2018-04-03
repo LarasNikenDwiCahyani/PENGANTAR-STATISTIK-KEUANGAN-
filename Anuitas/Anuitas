@@ -1,0 +1,20 @@
+annuitas <- function(num, i,k,n=TRUE)
+  
+  switch(num, 
+         
+         satu = {
+           v = 1/(1+i)
+           ananuitasakhir = k*(((1-(v^n))/i))
+           snanuitasakhir = k*(((1+i)^n)-1)/i
+           cat("Nilai an annuitas akhir : ", ananuitasakhir, "\n")
+           
+           cat("Nilai sn annuitas akhir: ", snanuitasakhir, "\n")
+         },
+         dua = {
+           v = 1/(1+i)
+           ananuitasawal = k*(1-(v^n))/(i*v)
+           snanuitasawal = k*(((1+i)^n)-1)/(i*v)
+           cat("Nilai an annuitas awal : ", ananuitasawal, "\n")
+           
+           cat("Nilai sn annuitas awal: ", snanuitasawal, "\n")
+         })
