@@ -1,0 +1,15 @@
+#fungsi untuk menghitung bunga : tunggal, majemuk nominal, dan majemuk kontinu
+pilihPv <- function(num, A, i, t, m=TRUE)
+  switch(num, 
+         satu = {
+           bungatunggal = A/(1+(i*t))
+           cat("Nilai Bunga Tunggal : ", bungatunggal)
+         },
+         dua = {
+           bungamajemuknominal = A/(1+(i/m))^(m*t)
+           cat("Nilai Bunga Majemuk Nominal : ", bungamajemuknominal)
+         },
+         tiga = {
+           bungamajemukkontinu = A/exp(i*t)
+           cat("Nilai Bunga Majemuk Kontinu : ", bungamajemukkontinu)
+         })
